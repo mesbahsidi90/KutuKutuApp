@@ -24,6 +24,8 @@ interface CartState {
 }
 
 const defaultRecipient: RecipientInfo = {
+  name: "",
+  phone: "",
   address: "",
   city: "",
   lat: null,

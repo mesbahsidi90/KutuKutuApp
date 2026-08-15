@@ -27,6 +27,8 @@ export interface CartAddonLine {
 }
 
 export interface RecipientInfo {
+  name: string;
+  phone: string;
   address: string;
   city: string;
   lat: number | null;
