@@ -130,7 +130,20 @@
     "orderHistory": "سجل الطلبات",
     "noOrders": "لم تقم بأي طلب بعد",
     "signOut": "تسجيل الخروج",
-    "signIn": "تسجيل الدخول"
+    "signIn": "تسجيل الدخول",
+    "emailLabel": "البريد الإلكتروني",
+    "checkEmailForLink": "تحقق من بريدك الإلكتروني للحصول على رابط تسجيل الدخول.",
+    "signInError": "تعذر إرسال رابط تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+    "orderNumber": "الطلب",
+    "orderDate": "تم الطلب في {date}"
+  },
+  "orderStatuses": {
+    "pending_payment": "بانتظار الدفع",
+    "confirmed": "تم التأكيد",
+    "preparing": "قيد التحضير",
+    "out_for_delivery": "في الطريق للتوصيل",
+    "delivered": "تم التوصيل",
+    "cancelled": "ملغى"
   },
   "admin": {
     "title": "لوحة الإدارة",

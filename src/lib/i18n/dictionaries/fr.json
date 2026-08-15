@@ -130,7 +130,20 @@
     "orderHistory": "Historique des commandes",
     "noOrders": "Vous n'avez pas encore passé de commande",
     "signOut": "Se déconnecter",
-    "signIn": "Se connecter"
+    "signIn": "Se connecter",
+    "emailLabel": "Adresse e-mail",
+    "checkEmailForLink": "Vérifiez votre e-mail pour le lien de connexion.",
+    "signInError": "Impossible d'envoyer le lien de connexion. Veuillez réessayer.",
+    "orderNumber": "Commande",
+    "orderDate": "Passée le {date}"
+  },
+  "orderStatuses": {
+    "pending_payment": "En attente de paiement",
+    "confirmed": "Confirmée",
+    "preparing": "En préparation",
+    "out_for_delivery": "En cours de livraison",
+    "delivered": "Livrée",
+    "cancelled": "Annulée"
   },
   "admin": {
     "title": "Panneau d'administration",

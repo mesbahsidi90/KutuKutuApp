@@ -130,7 +130,20 @@
     "orderHistory": "Order history",
     "noOrders": "You haven't placed any orders yet",
     "signOut": "Sign out",
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "emailLabel": "Email address",
+    "checkEmailForLink": "Check your email for a sign-in link.",
+    "signInError": "Couldn't send the sign-in link. Please try again.",
+    "orderNumber": "Order",
+    "orderDate": "Placed on {date}"
+  },
+  "orderStatuses": {
+    "pending_payment": "Awaiting payment",
+    "confirmed": "Confirmed",
+    "preparing": "Preparing",
+    "out_for_delivery": "Out for delivery",
+    "delivered": "Delivered",
+    "cancelled": "Cancelled"
   },
   "admin": {
     "title": "Admin Panel",
