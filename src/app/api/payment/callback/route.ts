@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServiceRoleClient } from "@/lib/supabase/service-role";
 import { getOrderStatus } from "@/lib/payment/satim";
+import { DELIVERY_LEAD_DAYS } from "@/lib/constants";
 
 // SATIM redirects the customer's browser here after they leave the hosted
 // payment page. The redirect itself is never trusted -- the actual result
@@ -17,25 +18,32 @@ export async function GET(request: NextRequest) {
     return NextResponse.redirect(new URL(`/${locale}/checkout?paymentFailed=1`, request.url));
   }
 
-  const supabase = createServiceRoleClient();
-
-  const { data: order } = await supabase
-    .from("orders")
-    .select("id, order_number, payment_reference")
-    .eq("id", orderId)
-    .maybeSingle();
-
-  if (!order || !order.payment_reference) {
-    return NextResponse.redirect(new URL(`/${locale}/checkout?paymentFailed=1`, request.url));
-  }
-
   try {
+    const supabase = createServiceRoleClient();
+
+    const { data: order } = await supabase
+      .from("orders")
+      .select("id, order_number, payment_reference")
+      .eq("id", orderId)
+      .maybeSingle();
+
+    if (!order || !order.payment_reference) {
+      return NextResponse.redirect(new URL(`/${locale}/checkout?paymentFailed=1`, request.url));
+    }
+
     const result = await getOrderStatus(order.payment_reference);
 
     if (result.status === "paid") {
+      const estimatedDeliveryAt = new Date();
+      estimatedDeliveryAt.setDate(estimatedDeliveryAt.getDate() + DELIVERY_LEAD_DAYS);
+
       await supabase
         .from("orders")
-        .update({ status: "confirmed", payment_status: "paid" })
+        .update({
+          status: "confirmed",
+          payment_status: "paid",
+          estimated_delivery_at: estimatedDeliveryAt.toISOString(),
+        })
         .eq("id", order.id);
 
       return NextResponse.redirect(
@@ -47,7 +55,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.redirect(new URL(`/${locale}/checkout?paymentFailed=1`, request.url));
   } catch (err) {
-    console.error("payment/callback: SATIM status check failed", err);
+    console.error("payment/callback: failed to verify/update payment", err);
     return NextResponse.redirect(new URL(`/${locale}/checkout?paymentFailed=1`, request.url));
   }
 }

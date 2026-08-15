@@ -122,7 +122,8 @@
     "orderNumber": "Order number",
     "estimatedDelivery": "Estimated delivery",
     "viewOrder": "View order details",
-    "backToHome": "Back to home"
+    "backToHome": "Back to home",
+    "notFound": "We couldn't find that order."
   },
   "account": {
     "title": "My Account",

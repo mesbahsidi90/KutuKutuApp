@@ -122,7 +122,8 @@
     "orderNumber": "رقم الطلب",
     "estimatedDelivery": "موعد التوصيل المتوقع",
     "viewOrder": "عرض تفاصيل الطلب",
-    "backToHome": "العودة إلى الرئيسية"
+    "backToHome": "العودة إلى الرئيسية",
+    "notFound": "تعذر العثور على هذا الطلب."
   },
   "account": {
     "title": "حسابي",

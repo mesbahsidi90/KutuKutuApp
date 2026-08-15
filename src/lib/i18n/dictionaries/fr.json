@@ -122,7 +122,8 @@
     "orderNumber": "Numéro de commande",
     "estimatedDelivery": "Livraison estimée",
     "viewOrder": "Voir les détails de la commande",
-    "backToHome": "Retour à l'accueil"
+    "backToHome": "Retour à l'accueil",
+    "notFound": "Impossible de trouver cette commande."
   },
   "account": {
     "title": "Mon compte",
