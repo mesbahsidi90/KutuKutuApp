@@ -24,6 +24,15 @@
     "account": "حسابي",
     "admin": "الإدارة"
   },
+  "categories": {
+    "retro": "ريترو",
+    "birthday": "عيد ميلاد",
+    "graduation": "تخرج",
+    "love": "حب",
+    "ramadan": "رمضان",
+    "wedding": "زفاف",
+    "other": "أخرى"
+  },
   "home": {
     "welcomeTitle": "كيك مصنوع تماماً كما تتخيله",
     "welcomeSubtitle": "صمّم كيكتك الخاصة أو اختر واحدة جاهزة، ونوصلها طازجة إلى بابك.",

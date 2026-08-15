@@ -24,6 +24,15 @@
     "account": "Compte",
     "admin": "Admin"
   },
+  "categories": {
+    "retro": "Rétro",
+    "birthday": "Anniversaire",
+    "graduation": "Remise de diplôme",
+    "love": "Amour",
+    "ramadan": "Ramadan",
+    "wedding": "Mariage",
+    "other": "Autre"
+  },
   "home": {
     "welcomeTitle": "Des gâteaux faits exactement comme vous l'imaginez",
     "welcomeSubtitle": "Concevez votre propre gâteau ou choisissez-en un déjà prêt, livré frais chez vous.",

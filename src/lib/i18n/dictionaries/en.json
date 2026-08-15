@@ -24,6 +24,15 @@
     "account": "Account",
     "admin": "Admin"
   },
+  "categories": {
+    "retro": "Retro",
+    "birthday": "Birthday",
+    "graduation": "Graduation",
+    "love": "Love",
+    "ramadan": "Ramadan",
+    "wedding": "Wedding",
+    "other": "Other"
+  },
   "home": {
     "welcomeTitle": "Cakes made just the way you imagine",
     "welcomeSubtitle": "Design your own cake or pick a ready-made favorite, delivered fresh to your door.",
